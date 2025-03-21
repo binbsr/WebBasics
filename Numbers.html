@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Printing Numbers</title>
+    <!-- <link rel="stylesheet" href="College.css" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="px-4 pt-2">
+    <label>Up to what?</label>
+    <input type="number" oninput="printNumbers()" class="form-control" id="upperRange" value="500" />
+    <h1 id="title">Numbers from 1-500</h1>
+    <div id="numbers">
+    </div>
+
+    <pre>
+        function printNumbers() {
+            let upto = document.getElementById("upperRange").value;
+            titleH1.innerText = "Numbers from 1-" + upto;
+        
+            let numbersDiv = document.getElementById("numbers");
+            let numbersHtml = "";
+            for (let i = 1; i <= upto; i++) {
+                numbersHtml = numbersHtml + "<h2 class='badge text-bg-warning'>" + i + "</h2>";  //<h2>1</h2><h2>2</h2>          
+            }
+            numbersDiv.innerHTML = numbersHtml;
+        }
+    </pre>
+
+    <script src="numbers.js"></script>
+</body>
+
+</html>
